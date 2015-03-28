@@ -1,0 +1,28 @@
+<ion-view view-title="Profile" ng-init="init()">
+    <ion-content has-header="true" class="profile-content">
+        <div id="profile-bg"></div>
+        <div id="content">
+            <div id="profile-info">
+                <img id="profile-image" ng-src="{{ playerData.avatar.replace('s=100', 's=500') }}">
+                <h3 id="profile-name">{{ playerData.name }}</h3>
+          <span id="profile-description">
+              <span class="energized ng-hide" ng-show="isVip"><i class="icon ion-android-star"></i> VIP</span>
+              <span ng-hide="isVip"><i class="icon ion-android-person"></i> Player</span> &middot;
+              <span>{{ playerRank.name }} ({{ playerRank.points }})</span>
+          </span>
+            </div>
+            <ion-list>
+                <ion-item ng-repeat="playerStat in playerStats">
+                    <div class="row">
+                        <div class="col text-left">
+                            {{ playerStat.name }}
+                        </div>
+                        <div class="col text-right gray">
+                            {{ playerStat.value }}
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

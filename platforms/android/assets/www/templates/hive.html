@@ -1,0 +1,17 @@
+<ion-view view-title="Hive" ng-init="init()">
+    <ion-content>
+        <ion-list>
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+            <ion-item ng-repeat="hiveStat in hiveStats">
+                <div class="row">
+                    <div class="col text-left">
+                        {{ hiveStat.name }}
+                    </div>
+                    <div class="col text-right gray">
+                        {{ hiveStat.value }}
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

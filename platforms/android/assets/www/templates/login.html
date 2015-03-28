@@ -1,0 +1,22 @@
+<ion-view view-title="Login">
+  <ion-content>
+    <div class="text-center">
+      <h3 class="positive login-heading">Breaking Point</h3>
+    </div>
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" name="ips_username" ng-model="loginData.ips_username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" name="ips_password" ng-model="loginData.ips_password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-side-menus enable-menu-with-back-views="false" ng-init="init()">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-positive">
+      <img src="img/icon.png" class="app-icon" alt="Icon">
+      <h1 class="title with-icon">
+        Breaking Point
+      </h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/profile" class="item-avatar header-avatar">
+          <img ng-src="{{ playerData.avatar }}">
+          <h2><i class="icon ion-android-star energized ng-hide" ng-show="isVip"></i> {{ playerData.name }}</h2>
+          <p><span class="ng-hide" ng-show="isVip">VIP &mdash;</span> {{ playerRank.name }} ({{ playerRank.points }})</p>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/news" ui-sref-active="drawerActive" ui-sref="app.news">
+            News / Changelogs
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/hive" ui-sref-active="drawerActive" ui-sref="app.hive">
+            Hive Statistics
+        </ion-item>
+<!--        <ion-item nav-clear menu-close href="#/app/bugtracker" ui-sref-active="drawerActive" ui-sref="app.bugtracker">
+            Bugtracker
+        </ion-item>-->
+        <ion-item nav-clear menu-close href="#/app/maps" ui-sref-active="drawerActive" ui-sref="app.maps">
+            Maps
+        </ion-item>
+        <ion-item class="item-divider"></ion-item>
+        <ion-item ng-click="logout()">
+          Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

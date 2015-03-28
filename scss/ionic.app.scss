@@ -1,0 +1,155 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$positive:  #7F0000 !default;
+$gray: #777777;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+// Design fixes
+// Hide scrollbars from popup (http://forum.ionicframework.com/t/popup-has-scrollbars-in-rc1-0-0/19021/3)
+.popup .popup-body {
+  overflow: hidden !important;
+}
+
+
+// Custom Styles
+.header-avatar img {
+  border-radius: 4px !important;
+}
+
+.login-heading {
+  margin-top: 10% !important;
+  margin-bottom: 10%;
+}
+
+.bar {
+  height: 55px;
+}
+
+.bar .title {
+  height: 56px;
+  line-height: 56px;
+  padding: 6px;
+}
+
+.bar .buttons-left {
+  padding-top: 2px;
+}
+
+.bar .buttons-left span,
+.bar .button.back-button {
+  margin-left: 5px;
+}
+
+.has-header {
+  top: 55px;
+}
+
+.title.with-icon {
+  margin-left: 5px;
+}
+
+.app-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.news-content p {
+  line-height: 1.5;
+}
+
+/* Profile */
+#profile-bg {
+  position: fixed;
+  left: 0;
+  top: 44px;
+  width: 100%;
+  height: 150px;
+
+  text-align: center;
+}
+
+.profile-content {
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#content {
+  position: relative;
+  margin-top: 150px;
+  background-color: white;
+  box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
+  padding-top: 200px;
+}
+
+#profile-info {
+  position: absolute;
+  top: -95px;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+#profile-name {
+  color: #444;
+  font-size: 26px;
+}
+#profile-description {
+  font-size: 15px;
+  color: #888;
+}
+#profile-description a {
+  color: #888;
+}
+
+#profile-image {
+  display: block;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  width: 128px;
+  height: 128px;
+  margin: 30px auto 0;
+  box-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+
+.list-item-content {
+  padding: 5px;
+}
+
+.list-item {
+  color: #666666;
+}
+
+.gray {
+  color: $gray;
+}
+
+
+/*
+.drawerActive a {
+  background-color: $positive !important;
+  color: $light;
+}*/

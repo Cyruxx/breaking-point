@@ -1,0 +1,12 @@
+{
+  "name": "breakingpoint",
+  "app_id": "ce71663c",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
